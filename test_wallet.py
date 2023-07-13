@@ -4,7 +4,7 @@ from .pages.customer_page import CustomerPage
 from .pages.account_page import AccountPage
 
 
-'''Тест создания нового файла в приложении Яндекс Диск'''
+'''Тест'''
 class TestBank:
 
     def test_bank(self, browser):
