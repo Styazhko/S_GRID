@@ -8,11 +8,11 @@ from .settings import host
 @pytest.fixture(scope="class")
 def browser(): 
     print("\nstart chrome browser for test..")
-    browser = webdriver.Remote(
-        command_executor=host + "/wd/hub",
-        options=webdriver.ChromeOptions()
-    )
-    # browser = webdriver.Chrome()
+    # browser = webdriver.Remote(
+    #     command_executor=host + "/wd/hub",
+    #     options=webdriver.ChromeOptions()
+    # )
+    browser = webdriver.Chrome()
     yield browser
     print("\nquit browser..")
     browser.quit()

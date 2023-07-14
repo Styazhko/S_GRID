@@ -1,3 +1,5 @@
+import allure
+
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -12,6 +14,7 @@ class BasePage:
         self.browser.implicitly_wait(timeout)
 
     '''Открытие страницы по заданному url'''
+    @allure.step("Открытие страницы по заданному url")
     def open(self):
         self.browser.get(self.url)
 

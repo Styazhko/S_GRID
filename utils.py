@@ -2,6 +2,7 @@ import csv
 import allure
 import datetime
 
+
 '''Вычисление N-го числа Фибоначчи, где N это текущий день запуска теста + 1'''
 def fibonacci_from_today_plus_one():
     current_day = datetime.datetime.now().date().day
@@ -33,3 +34,4 @@ def write_transactions_to_csv(transactions, file_path):
 def attach_csv_file(file_path):
     with open(file_path, "rb") as file:
         allure.attach(file.read(), name="transactions.csv", attachment_type=allure.attachment_type.CSV)
+        
