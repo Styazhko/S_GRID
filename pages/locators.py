@@ -24,9 +24,9 @@ class AccountPageLocators:
 
 
 class TransactionPageLocators:
-    DATE = (By.CSS_SELECTOR, "table > tbody > tr > td:nth-child(1)")
-    AMOUNT = (By.CSS_SELECTOR, "table > tbody > tr > td:nth-child(2)")
-    TRANSACTION_TYPE = (By.CSS_SELECTOR, "table > tbody > tr > td:nth-child(3)")
-    BODY_TRANSACTION = (By.CSS_SELECTOR, "table > tbody")
-    ROWS = (By.CSS_SELECTOR, "table > tbody > tr")
+    DATE = (By.CSS_SELECTOR, "td.ng-binding:nth-child(1)")
+    AMOUNT = (By.CSS_SELECTOR, "td.ng-binding:nth-child(2)")
+    TRANSACTION_TYPE = (By.CSS_SELECTOR, "td.ng-binding:nth-child(3)")
+    BODY_TRANSACTION = (By.CSS_SELECTOR, "table.table.table-bordered.table-striped > tbody")
+    ROWS = (By.CSS_SELECTOR, "tr[id^='anchor']")
     

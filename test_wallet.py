@@ -1,3 +1,5 @@
+import allure
+
 from .pages.transaction_page import TransactionPage
 from .pages.login_page import LoginPage
 from .pages.customer_page import CustomerPage
@@ -7,6 +9,9 @@ from .pages.account_page import AccountPage
 '''Тест'''
 class TestBank:
 
+    @allure.feature("Банк")
+    @allure.story("Взаимодействия в личном кабинете")
+    @allure.title("Тест успешной обработки транзакций")
     def test_bank(self, browser):
         link = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login"
         login_page = LoginPage(browser, link)
